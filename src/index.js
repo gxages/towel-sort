@@ -2,6 +2,23 @@
 // You should implement your task here.
 
 module.exports = function towelSort (matrix) {
+    if(!matrix){
+        return [];
+    }
+    const newArr = [...matrix].map((elem,index) =>{
+        if(typeof matrix !== 'undefined'){
+            if(!elem || elem == 0){
+            }
+            else if(index % 2){
+                return elem.reverse();
+            }
+            return elem;         
+        }
+        
+        });
+     
+    return newArr.flat(Infinity);
+    }
 
     // const zeroArr = matrix;
     // if (!zeroArr  || zeroArr == 0){
@@ -18,25 +35,6 @@ module.exports = function towelSort (matrix) {
     //     return zeroArr[i].reverse();
     // }
  
-    const newArr = [...matrix].map((elem,index) =>{
-        if(typeof matrix !== 'undefined'){
-            if(!elem || elem == 0){
-            }
-            else if(index % 2){
-                return elem.reverse();
-            }
-            return elem;         
-        }
-        
-        });
-     
-    return newArr.flat(Infinity);
-    }
-
-
-
-
-
 
 
         
